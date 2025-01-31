@@ -1,0 +1,13 @@
+.conversion-list{
+    font-size: 35px;
+    text-decoration: none;
+    list-style: none;
+}
+
+.conversion-list li{
+    margin-top: 60px;
+    background-color: rgb(112, 112, 156);
+    width: 200px;
+    text-align: center;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+}
