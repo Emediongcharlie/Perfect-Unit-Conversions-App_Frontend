@@ -6,8 +6,23 @@
 
 .conversion-list li{
     margin-top: 60px;
-    background-color: rgb(112, 112, 156);
-    width: 200px;
+    background-color: rgb(235, 215, 191);
+    width: 1000px;
     text-align: center;
     font-family: Georgia, 'Times New Roman', Times, serif;
+    cursor: pointer;
+}
+
+
+.option-list ul{
+    display: flex;
+    gap: 5rem;
+    width: 90%;
+    margin-top: 0px;
+}
+
+.display{
+    font-size: 35px;
+    align-content: center;
+    margin-left: 750px;
 }

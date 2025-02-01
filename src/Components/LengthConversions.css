@@ -1,0 +1,15 @@
+.form-container input{
+    font-size: 30px;
+
+}
+
+.form-container select{
+    font-size: 30px;
+    width: 370px;
+}
+
+.form-container button{
+    font-size: 30px;
+    width: 370px;
+    margin-top: 20px;
+}

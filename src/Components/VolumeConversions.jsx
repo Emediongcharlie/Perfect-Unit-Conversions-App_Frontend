@@ -38,7 +38,7 @@ const VolumeConversions = () => {
             })
             if (response.ok) {
                 const result = await response.json();
-                alert("Conversion result: " + result.convertedValue);
+                // alert("Conversion result: " + result.convertedValue);
 
                 setFormData((prev) => ({ ...prev, result: result.result }));
              
@@ -53,42 +53,58 @@ const VolumeConversions = () => {
           };
   
   return (
-    <div>
+    <div className='form-container'>
         <form onSubmit={handleSubmit}>
             <label>
-                Convert form
+                Convert From
+                <br />
                 <select name="convertFrom" value={formData.convertFrom}  onChange={handleChange}>
                 <option value="">--Select--</option>
-                <option value="l">liters</option>
-                <option value="cl">centiliters</option>
+                <option value="ml">Milliliter (ml)</option>
+                <option value="cl">Centiliters (cl)</option>
+                <option value="dl">Deciliter (dl)</option>
+                <option value="l">liters (l)</option>
+                <option value="dal">Decaliter (dal)</option>
+                <option value="hl">Hectoliters (hl)</option>
+                <option value="kl">kiloliter (kl)</option>
+                
                 </select>
             </label>
             <br />
             <label>
-                Convert to
+                Convert To
+                <br />
                 <select name='convertTo' value={formData.convertTo} onChange={handleChange}>
                 <option value="">--Select--</option>
-                <option value="l">liters</option>
-                <option value="cl">centiliters</option>
+                <option value="ml">Milliliter (ml)</option>
+                <option value="cl">Centiliters (cl)</option>
+                <option value="dl">Deciliter (dl)</option>
+                <option value="l">liters (l)</option>
+                <option value="dal">Decaliter (dal)</option>
+                <option value="hl">Hectoliters (hl)</option>
+                <option value="kl">kiloliter (kl)</option>
                 </select>
             </label>
             <br />
             <label>
                 Entry value
+                <br />
                 <input type="number" 
                 name='entryValue' 
                 value={formData.entryValue} 
                 onChange={handleChange}  />
             </label>
             <br />
+            <button type='submit' name='submit'>Submit</button>
+            <br />
             <label>
                 Result
+                <br />
                 <input type="text" 
                 name='result' 
                 value={formData.result} 
                 onChange={handleChange}  />
             </label>
-            <button type='submit'>Submit</button>
         </form>
     </div>
   )

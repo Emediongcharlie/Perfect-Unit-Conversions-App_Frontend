@@ -13,11 +13,10 @@ function App() {
     <div>
       <BrowserRouter>
       <Header />
-      <Routes>
-        {/* <Route path="/" element={<CalculationPage />}> */}
-          {/* <Home /> */}
-        {/* </Route> */}
-      </Routes>
+      {/* <Routes>
+        <Route path="/" element={<CalculationPage />}>
+        </Route>
+      </Routes> */}
       
       </BrowserRouter>
     </div>

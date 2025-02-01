@@ -6,16 +6,12 @@ import LengthConversions from './LengthConversions'
 const Header = () => {
   return (
     <div className='container'>
-        <h1>Welcome to our</h1>
-    <h1>Perfect Unit Conversions Calculator</h1>
-    <div className='analysis'>
-<div>
-             <CalculationPage />
+        <div>
+            <h1>Welcome to our Perfect Unit Conversions Calculator</h1>
         </div>
-        <div className='length'>
-            <LengthConversions />
-        </div>
-    
+        
+    <div>
+        <CalculationPage />
     </div>
     </div>
    

@@ -1,7 +1,6 @@
 import React, { useState } from 'react'
-import './LengthConversions.css'
 
-const LengthConversions = () => {
+const TemperatureConversions = () => {
 
     const[formData, setFormData] = useState({
         convertFrom:"",
@@ -26,7 +25,7 @@ const LengthConversions = () => {
         console.log("sending request:", formData)
 
         try{
-            const response = await fetch("http://localhost:8080/api/length-conversion", {
+            const response = await fetch("http://localhost:8080/api/temperature-conversions", {
                 method: "POST",
                 headers: {
                     'content-type': 'application/json',
@@ -41,12 +40,7 @@ const LengthConversions = () => {
                 const result = await response.json();
                 // alert("Conversion result: " + result.convertedValue);
 
-                setFormData((prev) => ({ ...prev, result: result.convertedValue }));
-                // setFormData({
-                //     convertFrom:"",
-                //     convertTo:"",
-                //     entryValue:"",
-                // })
+                setFormData((prev) => ({ ...prev, result: result.result }));
              
               } else {
                 const errorMessage = await response.text();
@@ -66,14 +60,9 @@ const LengthConversions = () => {
                 <br />
                 <select name="convertFrom" value={formData.convertFrom}  onChange={handleChange}>
                 <option value="">--Select--</option>
-                <option value="mm">Millimeter (mm)</option>
-                <option value="cm">Centimeters (cm)</option>
-                <option value="dm">Decimeter (dm)</option>
-                <option value="m">meters (m)</option>
-                <option value="dam">Decameter (dam)</option>
-                <option value="hm">Hectometers (hm)</option>
-                <option value="km">kilometer (km)</option>
-                
+                <option value="F">Degree Celcius (°c)</option>
+                <option value="C">Degree Farhenheit (°f)</option>
+                <option value="K">Degree Kelvin (°k)</option>
                 </select>
             </label>
             <br />
@@ -82,13 +71,9 @@ const LengthConversions = () => {
                 <br />
                 <select name='convertTo' value={formData.convertTo} onChange={handleChange}>
                 <option value="">--Select--</option>
-                <option value="mm">Millimeter (mm)</option>
-                <option value="cm">Centimeters (cm)</option>
-                <option value="dm">Decimeter (dm)</option>
-                <option value="m">Meters (m)</option>
-                <option value="dam">Decameter (dam)</option>
-                <option value="hm">Hectometers (hm)</option>
-                <option value="km">kilometer (km)</option>
+                <option value="F">Degree Celcius (°c)</option>
+                <option value="C">Degree Fahrenheit (°f)</option>
+                <option value="K">Degree Kelvin (°k)</option>
                 </select>
             </label>
             <br />
@@ -116,4 +101,4 @@ const LengthConversions = () => {
   )
 }
 
-export default LengthConversions
+export default TemperatureConversions

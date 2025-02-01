@@ -1,7 +1,6 @@
 import React, { useState } from 'react'
-import './LengthConversions.css'
 
-const LengthConversions = () => {
+const MassConversions = () => {
 
     const[formData, setFormData] = useState({
         convertFrom:"",
@@ -26,7 +25,7 @@ const LengthConversions = () => {
         console.log("sending request:", formData)
 
         try{
-            const response = await fetch("http://localhost:8080/api/length-conversion", {
+            const response = await fetch("http://localhost:8080/api/mass-conversions", {
                 method: "POST",
                 headers: {
                     'content-type': 'application/json',
@@ -41,12 +40,7 @@ const LengthConversions = () => {
                 const result = await response.json();
                 // alert("Conversion result: " + result.convertedValue);
 
-                setFormData((prev) => ({ ...prev, result: result.convertedValue }));
-                // setFormData({
-                //     convertFrom:"",
-                //     convertTo:"",
-                //     entryValue:"",
-                // })
+                setFormData((prev) => ({ ...prev, result: result.result }));
              
               } else {
                 const errorMessage = await response.text();
@@ -66,13 +60,13 @@ const LengthConversions = () => {
                 <br />
                 <select name="convertFrom" value={formData.convertFrom}  onChange={handleChange}>
                 <option value="">--Select--</option>
-                <option value="mm">Millimeter (mm)</option>
-                <option value="cm">Centimeters (cm)</option>
-                <option value="dm">Decimeter (dm)</option>
-                <option value="m">meters (m)</option>
-                <option value="dam">Decameter (dam)</option>
-                <option value="hm">Hectometers (hm)</option>
-                <option value="km">kilometer (km)</option>
+                <option value="mg">Milligram (mg)</option>
+                <option value="cg">Centigram (cg)</option>
+                <option value="dg">Decigram (dg)</option>
+                <option value="g">gram (g)</option>
+                <option value="dag">Decagram (dag)</option>
+                <option value="hg">Hectogram (hg)</option>
+                <option value="kg">kilogram (kg)</option>
                 
                 </select>
             </label>
@@ -82,13 +76,13 @@ const LengthConversions = () => {
                 <br />
                 <select name='convertTo' value={formData.convertTo} onChange={handleChange}>
                 <option value="">--Select--</option>
-                <option value="mm">Millimeter (mm)</option>
-                <option value="cm">Centimeters (cm)</option>
-                <option value="dm">Decimeter (dm)</option>
-                <option value="m">Meters (m)</option>
-                <option value="dam">Decameter (dam)</option>
-                <option value="hm">Hectometers (hm)</option>
-                <option value="km">kilometer (km)</option>
+                <option value="mg">Milligram (mg)</option>
+                <option value="cg">Centigram (cg)</option>
+                <option value="dg">Decigram (dg)</option>
+                <option value="g">Grams (g)</option>
+                <option value="dag">Decagram (dag)</option>
+                <option value="hg">Hectogram (hg)</option>
+                <option value="kg">kilogram (kg)</option>
                 </select>
             </label>
             <br />
@@ -116,4 +110,4 @@ const LengthConversions = () => {
   )
 }
 
-export default LengthConversions
+export default MassConversions
