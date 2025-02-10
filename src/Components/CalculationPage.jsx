@@ -6,6 +6,8 @@ import TimeConversions from './TimeConversions';
 import MassConversions from './MassConversions';
 import AreaConversions from './AreaConversions';
 import TemperatureConversions from './TemperatureConversions';
+import image from '../assets/EL344RB_2.webp'
+// import image from '../assets/download.jpg'
 
 const CalculationPage = () => {
 
@@ -18,7 +20,8 @@ const CalculationPage = () => {
     <div className='container'>
         <h1>Calculation Page</h1>
         <div className='container'> 
-           <div className='option-list'>      
+           <div className='option-list'>
+            <h2>Select the unit of conversion below:</h2>      
         <ul className='conversion-list'>
         <li onClick={() => handleItemClick("LENGTH CONVERSION")}>Length Unit Conversions</li>
         <li onClick={() => handleItemClick("VOLUME CONVERSIONS")}>Volume unit Conversions</li>
@@ -38,6 +41,9 @@ const CalculationPage = () => {
                 {selectedOption === 'AREA CONVERSIONS' && <AreaConversions />}
                 {selectedOption === 'TEMPERATURE CONVERSIONS' && <TemperatureConversions />}
 
+            </div>
+            <div className='image22'>
+                <img src={image} alt="EL344RB_2" className='image1' />
             </div>
                 
         </div> 

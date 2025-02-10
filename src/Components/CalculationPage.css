@@ -1,5 +1,5 @@
 .conversion-list{
-    font-size: 35px;
+    font-size: 25px;
     text-decoration: none;
     list-style: none;
 }
@@ -7,7 +7,7 @@
 .conversion-list li{
     margin-top: 60px;
     background-color: rgb(235, 215, 191);
-    width: 1000px;
+    /* width: 1000px; */
     text-align: center;
     font-family: Georgia, 'Times New Roman', Times, serif;
     cursor: pointer;
@@ -16,13 +16,42 @@
 
 .option-list ul{
     display: flex;
-    gap: 5rem;
+    flex-wrap: wrap;
+    gap: 3.5rem;
     width: 90%;
     margin-top: 0px;
+    align-items: center;
 }
 
 .display{
     font-size: 35px;
     align-content: center;
-    margin-left: 750px;
+    margin-left: 700px;
+    display: flex;
+    /* flex-wrap: wrap; */
+    /* min-width: 700px; */
+
+}
+.image1{
+    max-width: 900px;
+    max-height: 440px;
+    size: 200px;
+}
+
+/* .container{
+    width: 100%;
+   background-color: rgb(255, 255, 255);
+   margin-left: auto;
+   margin-right: auto;
+   padding-left: 0.5rem;
+   padding-right: 0.5rem;
+} */
+
+@media (max-width: 1300px){
+    .option-list ul{
+        gap: 3rem;
+    }
+    .display{
+        margin-left: 0px;
+    }
 }
