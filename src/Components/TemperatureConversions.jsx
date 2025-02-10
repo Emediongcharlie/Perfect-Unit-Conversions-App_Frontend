@@ -60,8 +60,8 @@ const TemperatureConversions = () => {
                 <br />
                 <select name="convertFrom" value={formData.convertFrom}  onChange={handleChange}>
                 <option value="">--Select--</option>
-                <option value="F">Degree Celcius (°c)</option>
-                <option value="C">Degree Farhenheit (°f)</option>
+                <option value="F">Degree Farhenheit (°f)</option>
+                <option value="C">Degree Celsius (°c)</option>
                 <option value="K">Degree Kelvin (°k)</option>
                 </select>
             </label>
@@ -71,8 +71,8 @@ const TemperatureConversions = () => {
                 <br />
                 <select name='convertTo' value={formData.convertTo} onChange={handleChange}>
                 <option value="">--Select--</option>
-                <option value="F">Degree Celcius (°c)</option>
-                <option value="C">Degree Fahrenheit (°f)</option>
+                <option value="F">Degree Fahrenheit (°f)</option>
+                <option value="C">Degree Celsius (°c)</option>
                 <option value="K">Degree Kelvin (°k)</option>
                 </select>
             </label>
